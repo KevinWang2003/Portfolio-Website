@@ -30,3 +30,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 Route::get('/', [WelcomeController::class, 'show']);
 
+Route::get('/profile', [WelcomeController::class, 'showProfile']);
+Route::get('/portfolio', [WelcomeController::class, 'showPortfolio']);
+Route::get('/blog', [WelcomeController::class, 'showBlog']);
+Route::get('/faq', [WelcomeController::class, 'showFAQ']);
+Route::get('/dashboard', [WelcomeController::class, 'showDashboard']);
+

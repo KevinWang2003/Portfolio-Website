@@ -1,0 +1,189 @@
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  color: black;
+  top: 0px;
+  text-align: center;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  color: black;
+  top: 10px;
+
+}
+
+body {
+background-color: #f0f0f0;
+background-repeat: no-repeat;
+background-size: 100%;
+overflow-x: hidden;
+padding-bottom: 255px;
+margin: 0;
+background-image: linear-gradient(to right, gray, white, gray);
+}
+
+p {
+  font-family: Calibri;
+  font-size: 20px;
+  color: black;
+  position: relative;
+  line-height: 20px;
+}
+
+
+header nav ul {
+  list-style-type: none;
+  margin-top: 8px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+header nav li {
+  float: right;
+}
+
+header nav li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  position: relative;
+}
+
+header nav li a:hover {
+  background-color: lightblue;
+}
+
+nav li a.active {
+  background-color: lightblue;
+  color: white;
+}
+
+main li {
+  list-style: none;
+}
+
+
+.gegevens, .baan, .games {
+    background-color: lightblue;
+    text-align: left;
+    border-radius: 25px;
+    box-shadow: 3px 3px black;
+}
+
+.gegevens {
+  position: relative;
+  display: block;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 405px;
+}
+
+.gegevens .image1 {
+  position: relative;
+  top: 20px;
+  left: 75%;
+}
+
+.gegevens p {
+  position: relative;
+  top: -350px;
+}
+
+.gegevens h2 {
+    position: relative;
+    top: -350px;
+}
+
+.baan {
+  position: relative;
+  display: block;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  height: 335px;
+}
+
+.baan p {
+  top: -235px;
+  left: -20px;
+}
+
+.baan h2 {
+    top: 0px;
+    left: 20px;
+}
+
+.baan .image2 {
+  position: relative;
+  top: -30px;
+  left: 68%;
+}
+
+.games {
+  position: relative;
+  display: block;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  height: 350px;
+  margin-top: 20px;
+}
+
+.games ul { 
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.games p {
+  top: -350px;
+  left: -20px;
+}
+
+.games h2 {
+    top: 0px;
+    left: 20px;
+}
+
+.games .video {
+  position: relative;
+  top: -30px;
+  left: 34%;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #333333;
+  height: 75px;
+  margin-top: 255px;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
