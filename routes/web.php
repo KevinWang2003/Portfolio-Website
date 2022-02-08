@@ -27,12 +27,12 @@ use Illuminate\Support\Facades\Route;
 //        'post' => $posts[$post]
 //    ]);
 //});
-use App\Http\Controllers\WelcomeController;
-Route::get('/', [WelcomeController::class, 'show']);
+use App\Http\Controllers\ViewController;
+Route::get('/', [ViewController::class, 'show']);
 
-Route::get('/profile', [WelcomeController::class, 'showProfile']);
-Route::get('/portfolio', [WelcomeController::class, 'showPortfolio']);
-Route::get('/blog', [WelcomeController::class, 'showBlog']);
-Route::get('/faq', [WelcomeController::class, 'showFAQ']);
-Route::get('/dashboard', [WelcomeController::class, 'showDashboard']);
+Route::get('/profile', [ViewController::class, 'showProfile']);
+Route::get('/portfolio', [ViewController::class, 'showPortfolio']);
+Route::get('/blog', [ViewController::class, 'showBlog']);
+Route::get('/faq', [ViewController::class, 'showFAQ']);
+Route::get('/dashboard', [ViewController::class, 'showDashboard']);
 
