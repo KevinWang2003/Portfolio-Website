@@ -29,7 +29,6 @@ use Illuminate\Support\Facades\Route;
 //});
 use App\Http\Controllers\ViewController;
 Route::get('/', [ViewController::class, 'show']);
-
 Route::get('/profile', [ViewController::class, 'showProfile']);
 Route::get('/portfolio', [ViewController::class, 'showPortfolio']);
 Route::get('/blog', [ViewController::class, 'showBlog']);

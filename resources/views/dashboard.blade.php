@@ -58,30 +58,30 @@
                             <td>Programme and Case Orientation</td>
                             <td>2,5</td>
                             <td>Assessment</td>
-                            <td>-</td>
+                            <td>9,1</td>
                         </tr>
                         <tr>
                             <td>Computer Science & Basics</td>
                             <td>7,5</td>
                             <td>Written</td>
-                            <td>-</td>
+                            <td>8,2</td>
                         </tr>
                         <tr>
                             <td>Programming Basics</td>
                             <td>5</td>
                             <td>Case Study Exam</td>
-                            <td>-</td>
+                            <td>10,0</td>
                         </tr>
                         <tr>
                             <td rowspan="2">2</td>
                             <td rowspan="2">Object Oriented Programming</td>
                             <td rowspan="2">10</td>
                             <td>Case study</td>
-                            <td>-</td>
+                            <td>7,0</td>
                         </tr>
                         <tr>
                             <td>Project</td>
-                            <td>-</td>
+                            <td>7,8</td>
                         </tr>
                         <tr>
                             <td rowspan="4">3</td>
@@ -151,7 +151,7 @@
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
                 <progress class="nodig" max="60" value="45">45 SC</progress>
                 <p>En dit is waar ik nu ben:</p>
-                <progress class="nodig" max="60" value="0">0</progress>
+                <progress class="nodig" max="60" value="25">0</progress>
             </div>
         </article>
         <footer><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></footer>
