@@ -16,7 +16,7 @@ class ViewController
      * shows profile
      */
 
-    public  function showProfile()
+    public function showProfile()
     {
         return view('profile');
     }
@@ -25,7 +25,7 @@ class ViewController
      * shows blog
      */
 
-    public  function showBlog()
+    public function showBlog()
     {
         return view('blog');
     }
@@ -34,7 +34,7 @@ class ViewController
      * shows FAQ
      */
 
-    public  function showFAQ()
+    public function showFAQ()
     {
         return view('faq');
     }
@@ -43,7 +43,7 @@ class ViewController
      * shows portfolio
      */
 
-    public  function showPortfolio()
+    public function showPortfolio()
     {
         return view('portfolio');
     }
@@ -52,7 +52,7 @@ class ViewController
      * shows dashboard
      */
 
-    public  function showDashboard()
+    public function showDashboard()
     {
         return view('dashboard');
     }
