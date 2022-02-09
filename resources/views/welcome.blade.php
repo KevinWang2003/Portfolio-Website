@@ -77,7 +77,7 @@
         <p>We leven nu eenmaal in een samenleving waarbij we bijna niet zonder onze telefoons kunnen.</p>
         <p>En ik wil dus ook voor bedrijven werken die apps en/of games maken. Dus vindt ik dat het beroep HBO-ICT bij mij past.</p>
     </div>
-    <footer><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></footer>
+    <footer><a href="https://www.youtube.com/watch?v=dEI7oX0XxJw"><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></a></footer>
 </main>
 </body>
 
