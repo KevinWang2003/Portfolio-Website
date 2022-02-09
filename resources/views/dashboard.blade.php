@@ -151,7 +151,7 @@
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
                 <progress class="nodig" max="60" value="45">45 SC</progress>
                 <p>En dit is waar ik nu ben:</p>
-                <progress class="nodig" max="60" value="25">0</progress>
+                <progress class="nodig" max="60" value="25">25 SC</progress>
             </div>
         </article>
         <footer><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></footer>
