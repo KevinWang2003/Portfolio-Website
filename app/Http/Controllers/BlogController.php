@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-class ViewController
+class BlogController
 {
     /**
-     * shows homepage
+     * shows blog
      */
+
     public function show()
     {
-        return view('welcome');
+        return view('blog');
     }
 }

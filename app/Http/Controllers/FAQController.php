@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-class ViewController
+class FAQController
 {
     /**
-     * shows homepage
+     * shows FAQ
      */
+
     public function show()
     {
-        return view('welcome');
+        return view('faq');
     }
 }

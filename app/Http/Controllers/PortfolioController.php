@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-class ViewController
+class PortfolioController
 {
     /**
-     * shows homepage
+     * shows portfolio
      */
+
     public function show()
     {
-        return view('welcome');
+        return view('portfolio');
     }
 }

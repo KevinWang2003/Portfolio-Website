@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-class ViewController
+class DashboardController
 {
     /**
-     * shows homepage
+     * shows dashboard
      */
+
     public function show()
     {
-        return view('welcome');
+        return view('dashboard');
     }
 }
