@@ -29,14 +29,16 @@ use Illuminate\Support\Facades\Route;
 //});
 use App\Http\Controllers\ViewController;
 Route::get('/', [ViewController::class, 'show']);
+use App\Http\Controllers\PostsController;
+Route::get('/posts/{slug}', [PostsController::class, 'show']);
 use App\Http\Controllers\ProfileController;
 Route::get('/profile', [ProfileController::class, 'show']);
 use App\Http\Controllers\PortfolioController;
 Route::get('/portfolio', [PortfolioController::class, 'show']);
 use App\Http\Controllers\BlogController;
 Route::get('/blog', [BlogController::class, 'show']);
-use App\Http\Controllers\FAQController;
-Route::get('/faq', [FAQController::class, 'show']);
+use App\Http\Controllers\FaqsController;
+Route::get('/faqs', [FaqsController::class, 'show']);
 use App\Http\Controllers\DashboardController;
 Route::get('/dashboard', [DashboardController::class, 'show']);
 

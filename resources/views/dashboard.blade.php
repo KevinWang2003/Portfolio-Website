@@ -34,7 +34,7 @@
                 <li><a href="portfolio">Portfolio</a></li>
                 <li><a class="active" href="dashboard">Dashboard</a></li>
                 <li><a href="blog">Blog</a></li>
-                <li><a href="faq">FAQ</a></li>
+                <li><a href="faqs">FAQ</a></li>
             </ul>
         </nav>
         <h1>Dashboard</h1>

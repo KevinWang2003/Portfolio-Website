@@ -73,10 +73,11 @@ h2 {
 }
 
 p {
+    margin-top: 0px;
   position: relative;
   text-align: center;
-  line-height: 5px;
   font-family: Calibri;
+  line-height: 1.5;
   font-size: 20px;
   color: black;
 }
@@ -109,14 +110,14 @@ main .active, .collapsible:hover {
 
 
 main .content {
-  padding: 0 0px;
+  padding: 0px;
   background-color: #BEBEBE;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   border-radius: 50px;
   border: 2px;
-  width: 60%;
+  width: 65%;
   position: relative;
   margin-left: auto;
   margin-right: auto;

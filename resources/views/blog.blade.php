@@ -21,7 +21,7 @@
                 <li><a href="portfolio">Portfolio</a></li>
                 <li><a href="dashboard">Dashboard</a></li>
                 <li><a class="active" href="blog">Blog</a></li>
-                <li><a href="faq">FAQ</a></li>
+                <li><a href="faqs">FAQ</a></li>
             </ul>
         </nav>
     </header>
