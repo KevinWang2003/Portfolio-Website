@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+
+    /**
+     *Shows Articles Page
+     */
+
     public function show($id)
     {
         $article = Article::find($id);
