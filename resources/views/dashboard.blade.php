@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
 <head>
     <link rel="stylesheet" href="css/dashboard.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-control" content="no-cache">
     <script src="js/sidenav.js"></script>
-    <script src="https://kit.fontawesome.com/5f690037a3.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
 
-<body>
+@section('content')
+    <span onclick="toggleNav()">&#9776;</span>
     <!--Menu aan de zijkant-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
@@ -24,19 +19,8 @@
         <li><a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank">Studievoortgang</a></li>
         <li><a href="https://github.com/HZ-HBO-ICT" target="_blank">Github</a></li>
     </div>
+
     <div id="main">
-        <!--Navigatie Menu-->
-        <nav>
-            <ul>
-                <li><span style="font-size:30px;cursor:pointer;" onclick="toggleNav()">&#9776;</span></li>
-                <li><a href="/"><i class="fas fa-home"></i></a></li>
-                <li><a href="profile">Profile</a></li>
-                <li><a href="portfolio">Portfolio</a></li>
-                <li><a class="active" href="dashboard">Dashboard</a></li>
-                <li><a href="blog">Blog</a></li>
-                <li><a href="faqs">FAQ</a></li>
-            </ul>
-        </nav>
         <h1>Dashboard</h1>
         <section>
             <!--Tabel van waar ik mijn studiepunten kan behalen-->
@@ -156,6 +140,4 @@
         </article>
         <footer><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></footer>
     </div>
-</body>
-
-</html>
+@endsection

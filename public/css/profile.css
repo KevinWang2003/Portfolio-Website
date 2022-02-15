@@ -4,7 +4,7 @@ h1 {
   font-weight: bold;
   font-size: 30px;
   position: relative;
-  color: black;
+  color: white;
   top: 0px;
   text-align: center;
 }
@@ -19,13 +19,13 @@ h2 {
 }
 
 body {
-background-color: #f0f0f0;
-background-repeat: no-repeat;
-background-size: 100%;
-overflow-x: hidden;
-padding-bottom: 255px;
-margin: 0;
-background-image: linear-gradient(to right, gray, white, gray);
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+    padding-bottom: 255px;
+    margin: 0;
+    background-image: linear-gradient(to right, #656565,#222222);
 }
 
 p {
@@ -36,45 +36,6 @@ p {
   line-height: 20px;
 }
 
-
-header nav ul {
-  list-style-type: none;
-  margin-top: 8px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-  width: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-header nav li {
-  float: right;
-}
-
-header nav li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  position: relative;
-}
-
-header nav li a:hover {
-  background-color: lightblue;
-}
-
-nav li a.active {
-  background-color: lightblue;
-  color: white;
-}
 
 main li {
   list-style: none;
@@ -155,7 +116,7 @@ main li {
   margin-top: 20px;
 }
 
-.games ul { 
+.games ul {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }

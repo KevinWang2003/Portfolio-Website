@@ -3,8 +3,9 @@ h1 {
     font-weight: bold;
     font-size: 30px;
     position: relative;
-    color: Black;
+    color: white;
     top: 0px;
+    margin: 0;
     text-align: center;
 }
 h2 {
@@ -23,32 +24,42 @@ background-image: none;
 background-size: cover;
 background-position: 50% 50%;
 overflow-x: hidden;
-background-image: linear-gradient(to right, gray, white, gray);
+background-image: linear-gradient(to right, #656565,#222222);
 padding-bottom: 20px;
 }
 
 p {
     font-family: Calibri;
     font-size: 20px;
-    color: black;
+    color: white;
     position: relative;
     text-align: center;
 }
 
+span {
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+    position: fixed;
+    font-size:30px;
+    cursor:pointer;
+}
+
 .sidenav {
-    height: 100%; 
-    width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: gray; 
-    overflow-x: hidden; 
-    padding-top: 60px; 
-    transition: 0.5s; 
+    background-color: gray;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
     text-decoration: none;
   }
-  
+
  .sidenav li {
      list-style-type: none;
  }
@@ -62,13 +73,13 @@ p {
     display: block;
     transition: 0.3s;
   }
-  
+
 
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
- 
+
+
   .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -76,8 +87,8 @@ p {
     font-size: 36px;
     margin-left: 50px;
   }
-  
- 
+
+
   #main {
     transition: margin-left .5s;
     padding: 20px;
@@ -95,50 +106,6 @@ p {
     line-height: 10px;
   }
 
-  #main nav ul {
-    list-style-type: none;
-    margin-top: -20px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 710px;
-    border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#main nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
-
-#main nav li a:hover {
-    background-color: lightblue;
-}
-
-#main nav ul li span {
-    color: white;
-    padding: 20px;
-    position: relative;
-    top: -2px;
-}
-#main nav li span:hover {
-    background-color: lightblue;
-}
-
-#main nav li a.active {
-  background-color: lightblue;
-  color: white;
-}
 #main table, th, td {
   border: 2px solid white;
   border-collapse: collapse;
@@ -175,7 +142,7 @@ progress {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 10px;
-  
+
 }
 progress:after {
   content: attr(value)'EC';

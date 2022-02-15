@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
 <head>
     <link rel="stylesheet" href="css/index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Dit is een website die door een HBO-ICT student van het HZ University Of Applied Sciences is gemaakt">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <script src="https://kit.fontawesome.com/5f690037a3.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 
-<body>
-<header>
-    <!--Navigatie Menu-->
-    <nav>
-        <ul>
-            <li><a class="active" href="/"><i class="fas fa-home"></i></a></li>
-            <li><a href="profile">Profile</a></li>
-            <li><a href="portfolio">Portfolio</a></li>
-            <li><a href="dashboard">Dashboard</a></li>
-            <li><a href="blog">Blog</a></li>
-            <li><a href="faqs">FAQ</a></li>
-        </ul>
-    </nav>
-</header>
+@section('content')
 <main>
     <h1>Home</h1>
     <div class="motivatie">
@@ -79,6 +58,4 @@
     </div>
     <footer><a href="https://www.youtube.com/watch?v=dEI7oX0XxJw"><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></a></footer>
 </main>
-</body>
-
-</html>
+@endsection
