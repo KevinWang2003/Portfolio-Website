@@ -42,5 +42,4 @@ class FaqsController extends Controller
 
         return redirect('/faqs/index');
     }
-
 }

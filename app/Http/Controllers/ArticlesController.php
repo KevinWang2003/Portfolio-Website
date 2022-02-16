@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 class ArticlesController extends Controller
 {
 
+    /**
+     * The Index of the article page
+     */
+
     public function index()
     {
         return view('blog');
     }
 
     /**
-     *Shows Articles Page
+     *Shows a specific Article Page
      */
 
     public function show($id)
@@ -24,10 +28,18 @@ class ArticlesController extends Controller
         return view('articles.show', ['article' => $article]);
     }
 
+    /**
+     * Function to create new articles
+     */
+
     public function create()
     {
         return view('articles.create');
     }
+
+    /**
+     * Function to store new data to the database
+     */
 
     public function store()
     {
