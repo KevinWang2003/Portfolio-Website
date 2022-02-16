@@ -1,9 +1,9 @@
 @extends('layout')
 
-<head>
+@section('head')
     <link rel="stylesheet" href="css/portfolio.css">
     <title>Portfolio</title>
-</head>
+@endsection
 
 @section('content')
     <main>

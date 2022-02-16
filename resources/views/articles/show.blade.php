@@ -1,7 +1,8 @@
 @extends('layout')
 
-<link rel="stylesheet" href="../css/layout.css">
-<link rel="stylesheet" href="../css/show.css">
+<head>
+    <link rel="stylesheet" href="../css/show.css">
+</head>
 
 @section('content')
 

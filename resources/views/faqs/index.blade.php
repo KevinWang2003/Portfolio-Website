@@ -1,7 +1,7 @@
 @extends('layout')
 
 <head>
-    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="../css/faq.css">
     <title>FAQ</title>
 </head>
 
@@ -15,13 +15,13 @@
             </button>
             <div class="content">
                 @if(!$faq->link == null);
-                    <p><a href="{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
+                    <p><a href="//{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
                 @else;
                     <p>{{ $faq->answer }}</p>
                 @endif
             </div>
             @endforeach
-            <script src="js/faq.js"></script>
+            <script src="../js/faq.js"></script>
         </section>
     </main>
 @endsection

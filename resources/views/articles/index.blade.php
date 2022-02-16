@@ -1,9 +1,9 @@
 @extends('layout')
 
-<head>
-    <link rel="stylesheet" href="css/blog.css">
+@section('head')
+    <link rel="stylesheet" href="../css/blog.css">
     <title>Blog</title>
-</head>
+@endsection
 
 @section('content')
     <main>
@@ -16,7 +16,7 @@
                 <a href="/articles/{{ $article->id }}"><p>Lees meer..</p></a>
             </div>
             @endforeach
-            <script src="js/faq.js"></script>
+            <script src="../js/faq.js"></script>
         </section>
     </main>
 @endsection

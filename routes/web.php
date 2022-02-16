@@ -43,23 +43,33 @@ use App\Http\Controllers\PortfolioController;
 
 Route::get('/portfolio', [PortfolioController::class, 'show']);
 
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/blog', [BlogController::class, function () {
-    return view('blog', [
+Route::get('/dashboard', [DashboardController::class, 'show']);
+
+use App\Http\Controllers\ArticlesController;
+
+Route::get('/articles/index', [ArticlesController::class, function () {
+    return view('articles.index', [
         'articles' => App\Models\Article::all()
     ]);
 }
 ]);
 
-use App\Http\Controllers\ArticlesController;
-
+Route::post('/articles', [ArticlesController::class, 'store']);
+Route::get('/articles/create', [ArticlesController::class, 'create']);
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+
+// GET articles
+// GET articles/create
+// POST /articles
+// GET articles/:id
+// GET articles/:id/edit
+// PUT /articles/:id
+// DELETE /articles/:id
 
 use App\Http\Controllers\FaqsController;
 
-Route::get('/faqs', [FaqsController::class, 'show']);
-
-use App\Http\Controllers\DashboardController;
-
-Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/faqs/index', [FaqsController::class, 'show']);
+Route::post('/faqs', [FaqsController::class, 'store']);
+Route::get('/faqs/create', [FaqsController::class, 'create']);
