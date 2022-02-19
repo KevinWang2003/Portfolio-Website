@@ -52,4 +52,44 @@ class ArticlesController extends Controller
 
         return redirect('/articles/index');
     }
+
+    /**
+     * Function to show specific article to edit
+     */
+
+    public function edit($id)
+    {
+        $article = Article::find($id);
+
+        return view('articles.edit', compact('article'));
+    }
+
+    /**
+     * Function to update specific Article
+     */
+
+    public function update($id)
+    {
+        $article = Article::find($id);
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+        $article->save();
+
+        return redirect('../articles/index');
+    }
+
+    /**
+     * Deletes Article
+     */
+
+    public function destroy($id)
+    {
+        $article = Article::find($id);
+
+        $article->delete();
+
+        return redirect('../articles/index');
+    }
 }

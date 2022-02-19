@@ -1,23 +1,24 @@
 @extends('layout')
 
 <head>
-<link rel="stylesheet" href="../css/create.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
 </head>
 
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">New Article</h1>
+            <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
 
-            <form method="POST" action="../articles">
+            <form method="POST" action="/articles/{{ $article->id }}">
                 @csrf
+                @method('PUT')
 
                 <div class="field">
                     <label class="label" for="title">Title</label>
 
                     <div class="control">
-                        <input class="input" type="text" name="title" id="title">
+                        <input class="input" type="text" name="title" id="title" value="{{ $article->title }}">
                     </div>
                 </div>
 
@@ -25,7 +26,7 @@
                     <label class="label" for="">Excerpt</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="excerpt" id="excerpt"></textarea>
+                        <textarea class="textarea" name="excerpt" id="excerpt">{{ $article->excerpt }}</textarea>
                     </div>
                 </div>
 
@@ -33,7 +34,7 @@
                     <label class="label" for=""Body>Body</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="body" id="body"></textarea>
+                        <textarea class="textarea" name="body" id="body">{{ $article->body }}</textarea>
                     </div>
                 </div>
 
@@ -44,6 +45,12 @@
 
                     <div class="control">
                         <button class="button is-text">Cancel</button>
+                    </div>
+
+                    <div class="control">
+                        @csrf
+                        @method('DELETE')
+                        <button class="button is-link" type="submit">Delete</button>
                     </div>
                 </div>
             </form>

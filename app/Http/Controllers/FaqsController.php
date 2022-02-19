@@ -42,4 +42,44 @@ class FaqsController extends Controller
 
         return redirect('/faqs/index');
     }
+
+    /**
+     * Function to show specific article to edit
+     */
+
+    public function edit($id)
+    {
+        $faq = Faq::find($id);
+
+        return view('faqs.edit', compact('faq'));
+    }
+
+    /**
+     * Function to update specific Article
+     */
+
+    public function update($id)
+    {
+        $faq = Faq::find($id);
+
+        $faq->question = request('question');
+        $faq->answer = request('answer');
+        $faq->link = request('link');
+        $faq->save();
+
+        return redirect('../faqs/index');
+    }
+
+    /**
+     * Deletes Article
+     */
+
+    public function destroy($id)
+    {
+        $faq = Faq::find($id);
+
+        $faq->delete();
+
+        return redirect('../articles/index');
+    }
 }

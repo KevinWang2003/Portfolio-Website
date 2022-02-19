@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewController;
+use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,27 +34,16 @@ use Illuminate\Support\Facades\Route;
 //        'post' => $posts[$post]
 //    ]);
 //});
-use App\Http\Controllers\ViewController;
 
 Route::get('/', [ViewController::class, 'show']);
 
-use App\Http\Controllers\PostsController;
-
 Route::get('/posts/{slug}', [PostsController::class, 'show']);
-
-use App\Http\Controllers\ProfileController;
 
 Route::get('/profile', [ProfileController::class, 'show']);
 
-use App\Http\Controllers\PortfolioController;
-
 Route::get('/portfolio', [PortfolioController::class, 'show']);
 
-use App\Http\Controllers\DashboardController;
-
 Route::get('/dashboard', [DashboardController::class, 'show']);
-
-use App\Http\Controllers\ArticlesController;
 
 Route::get('/articles/index', [ArticlesController::class, function () {
     return view('articles.index', [
@@ -59,6 +55,9 @@ Route::get('/articles/index', [ArticlesController::class, function () {
 Route::post('/articles', [ArticlesController::class, 'store']);
 Route::get('/articles/create', [ArticlesController::class, 'create']);
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
+Route::put('/articles/{article}', [ArticlesController::class, 'update']);
+Route::delete('/articles/{article}', [ArticlesController::class, 'destroy']);
 
 // GET articles
 // GET articles/create
@@ -68,8 +67,9 @@ Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 // PUT /articles/:id
 // DELETE /articles/:id
 
-use App\Http\Controllers\FaqsController;
-
 Route::get('/faqs/index', [FaqsController::class, 'show']);
 Route::post('/faqs', [FaqsController::class, 'store']);
 Route::get('/faqs/create', [FaqsController::class, 'create']);
+Route::get('/faqs/{faq}/edit', [FaqsController::class, 'edit']);
+Route::put('/faqs/{faq}', [FaqsController::class, 'update']);
+Route::delete('/faqs/{faq}', [FaqsController::class, 'destroy']);
