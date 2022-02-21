@@ -7,7 +7,6 @@ class PortfolioController
     /**
      * shows portfolio
      */
-
     public function show()
     {
         return view('portfolio');

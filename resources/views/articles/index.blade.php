@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <title>Blog</title>
 @endsection
 
@@ -13,10 +13,10 @@
             <button type="button" class="collapsible">{{ $article->title }}</button>
             <div class="content">
                 <p>{{ $article->excerpt }}</p>
-                <a href="/articles/{{ $article->id }}"><p>Lees meer..</p></a>
+                <a href="{{ route('articles.show', $article) }}"><p>Lees meer..</p></a>
             </div>
             @endforeach
-            <script src="../js/faq.js"></script>
+            <script src="/js/faq.js"></script>
         </section>
     </main>
 @endsection

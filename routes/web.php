@@ -49,12 +49,11 @@ Route::get('/articles/index', [ArticlesController::class, function () {
     return view('articles.index', [
         'articles' => App\Models\Article::all()
     ]);
-}
-]);
+}])->name('articles.index');
 
 Route::post('/articles', [ArticlesController::class, 'store']);
 Route::get('/articles/create', [ArticlesController::class, 'create']);
-Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+Route::get('/articles/{article}', [ArticlesController::class, 'show'])->name('articles.show');
 Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
 Route::put('/articles/{article}', [ArticlesController::class, 'update']);
 Route::delete('/articles/{article}', [ArticlesController::class, 'destroy']);
@@ -67,7 +66,7 @@ Route::delete('/articles/{article}', [ArticlesController::class, 'destroy']);
 // PUT /articles/:id
 // DELETE /articles/:id
 
-Route::get('/faqs/index', [FaqsController::class, 'show']);
+Route::get('/faqs/index', [FaqsController::class, 'show'])->name('faqs.index');
 Route::post('/faqs', [FaqsController::class, 'store']);
 Route::get('/faqs/create', [FaqsController::class, 'create']);
 Route::get('/faqs/{faq}/edit', [FaqsController::class, 'edit']);

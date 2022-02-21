@@ -11,7 +11,6 @@ class ArticlesController extends Controller
     /**
      * The Index of the article page
      */
-
     public function index()
     {
         return view('blog');
@@ -20,18 +19,14 @@ class ArticlesController extends Controller
     /**
      *Shows a specific Article Page
      */
-
-    public function show($id)
+    public function show(Article $article)
     {
-        $article = Article::find($id);
-
         return view('articles.show', ['article' => $article]);
     }
 
     /**
      * Function to create new articles
      */
-
     public function create()
     {
         return view('articles.create');
@@ -40,56 +35,48 @@ class ArticlesController extends Controller
     /**
      * Function to store new data to the database
      */
-
-    public function store()
+    public function store(Request $request)
     {
-        $article = new Article();
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->save();
-
-        return redirect('/articles/index');
+        Article::create($this->validateArticle($request));
+        return redirect(route('articles.index'));
     }
 
     /**
      * Function to show specific article to edit
      */
-
-    public function edit($id)
+    public function edit(Article $article)
     {
-        $article = Article::find($id);
-
         return view('articles.edit', compact('article'));
     }
 
     /**
      * Function to update specific Article
      */
-
-    public function update($id)
+    public function update(Request $request, Article $article)
     {
-        $article = Article::find($id);
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->save();
-
-        return redirect('../articles/index');
+        $article->update($this->validateArticle($request));
+        return redirect(route('articles.index'));
     }
 
     /**
      * Deletes Article
      */
-
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        $article = Article::find($id);
-
         $article->delete();
+        return redirect(route('articles.index'));
+    }
 
-        return redirect('../articles/index');
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function validateArticle(Request $request): array
+    {
+        return $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }

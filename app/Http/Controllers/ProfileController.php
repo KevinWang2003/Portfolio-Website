@@ -7,7 +7,6 @@ class ProfileController
     /**
      * shows profile
      */
-
     public function show()
     {
         return view('profile');

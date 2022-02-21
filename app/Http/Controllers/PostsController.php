@@ -10,7 +10,6 @@ class PostsController extends Controller
     /**
      * Shows Post
      */
-
     public function show($slug)
     {
         return view('post', [

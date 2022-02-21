@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Models\Faq;
+use Illuminate\Http\Request;
 
 class FaqsController extends Controller
 {
     /**
      * shows FAQ page
      */
-
     public function show()
     {
-        return view('../faqs/index', [
+        return view('/faqs/index', [
             'faqs' => Faq::all()
         ]);
     }
@@ -21,7 +21,6 @@ class FaqsController extends Controller
     /**
      * function to show FAQ create page
      */
-
     public function create()
     {
         return view('faqs.create');
@@ -30,56 +29,48 @@ class FaqsController extends Controller
     /**
      * Stores the new data to the database
      */
-
-    public function store()
+    public function store(Request $request)
     {
-        $faq = new Faq();
-
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
-        $faq->save();
-
-        return redirect('/faqs/index');
+        Faq::create($this->validateFaq($request));
+        return redirect(route('faqs.index'));
     }
 
     /**
-     * Function to show specific article to edit
+     * Function to show specific FAQ to edit
      */
-
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faq = Faq::find($id);
-
         return view('faqs.edit', compact('faq'));
     }
 
     /**
-     * Function to update specific Article
+     * Function to update specific FAQ
      */
-
-    public function update($id)
+    public function update(Request $request, Faq $faq)
     {
-        $faq = Faq::find($id);
-
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
-        $faq->save();
-
-        return redirect('../faqs/index');
+        $faq->update($this->validateFaq($request));
+        return redirect(route('faqs.index'));
     }
 
     /**
-     * Deletes Article
+     * Deletes FAQ
      */
-
-    public function destroy($id)
+    public function destroy(Faq $faq)
     {
-        $faq = Faq::find($id);
-
         $faq->delete();
+        return redirect(route('faqs.index'));
+    }
 
-        return redirect('../articles/index');
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function validateFaq(Request $request): array
+    {
+        return $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'link' => ''
+        ]);
     }
 }

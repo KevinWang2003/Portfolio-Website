@@ -1,7 +1,7 @@
 @extends('layout')
 
 <head>
-    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="/css/faq.css">
     <title>FAQ</title>
 </head>
 
@@ -21,7 +21,7 @@
                 @endif
             </div>
             @endforeach
-            <script src="../js/faq.js"></script>
+            <script src="/js/faq.js"></script>
         </section>
     </main>
 @endsection
