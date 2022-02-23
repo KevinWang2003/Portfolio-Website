@@ -10,9 +10,9 @@
         <article>
             <h1>Profile</h1>
             <div class="gegevens">
+                <h2>Persoonlijke Gegevens:</h2>
                 <img class="image1" src="resources/Mijn foto.jpg" alt="Selfie" width="217px" height="363px">
                 <ul>
-                    <h2>Persoonlijke Gegevens:</h2>
                     <li><p>Naam: Kevin Wang</p></li>
                     <li><p>Leeftijd: 17 (Bijna 18)</p></li>
                     <li><p>Geboortedatum: 09-12-2003</p></li>
@@ -25,8 +25,8 @@
             </div>
             <div class="baan">
                 <h2>Bijbaan en Vrijetijd:</h2>
+                <img class="image2" src="resources/Ayaya.gif" alt="Ayaya">
                 <ul>
-                    <img class="image2" src="resources/Ayaya.gif" alt="Ayaya">
                     <li><p>Mijn ouders komen uit Azië en ik geboren in Nederland</p></li>
                     <li><p>Mijn vader komt uit China en mijn moeder komt uit Vietnam.</p></li>
                     <li><p>Ik werk bij de cafetaria van mijn ouders.</p></li>
@@ -38,13 +38,13 @@
             </div>
             <div class="games">
                 <h2>Games die ik speel:</h2>
-                <ul>
-                    <div class="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fiJ7JwwlG6o"
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fiJ7JwwlG6o"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                    </div>
+                </div>
+                <ul>
                     <li><p>Minecraft</p></li>
                     <li><p>Counter-Strike Global Offensive</p></li>
                     <li><p>Osu!</p></li>

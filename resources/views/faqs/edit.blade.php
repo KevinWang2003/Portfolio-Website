@@ -67,7 +67,7 @@
                 <div class="control">
                     @csrf
                     @method('DELETE')
-                    <button class="button is-link" type="submit">Delete</button>
+                    <button class="button is-danger" type="submit">Delete</button>
                 </div>
             </form>
         </div>

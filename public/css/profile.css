@@ -1,13 +1,3 @@
-
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  position: relative;
-  color: white;
-  top: 0px;
-  text-align: center;
-}
 h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -18,16 +8,6 @@ h2 {
 
 }
 
-body {
-    background-color: #f0f0f0;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    overflow-x: hidden;
-    padding-bottom: 255px;
-    margin: 0;
-    background-image: linear-gradient(to right, #656565,#222222);
-}
-
 p {
   font-family: Calibri;
   font-size: 20px;
@@ -35,12 +15,6 @@ p {
   position: relative;
   line-height: 20px;
 }
-
-
-main li {
-  list-style: none;
-}
-
 
 .gegevens, .baan, .games {
     background-color: lightblue;
@@ -59,19 +33,21 @@ main li {
 }
 
 .gegevens .image1 {
-  position: relative;
+  position: absolute;
   top: 20px;
   left: 75%;
 }
 
-.gegevens p {
-  position: relative;
-  top: -350px;
+.gegevens ul {
+    position: relative;
+    margin-left: -10px;
+    top: 15px;
 }
 
 .gegevens h2 {
     position: relative;
-    top: -350px;
+    margin-left: 30px;
+    top: 20px;
 }
 
 .baan {
@@ -87,20 +63,21 @@ main li {
   height: 335px;
 }
 
-.baan p {
-  top: -235px;
-  left: -20px;
+.baan ul {
+    position: relative;
+    top: 20px;
+    margin: -20px;
 }
 
 .baan h2 {
+    position: relative;
     top: 0px;
     left: 20px;
 }
 
 .baan .image2 {
-  position: relative;
-  top: -30px;
-  left: 68%;
+  position: absolute;
+  left: 70%;
 }
 
 .games {
@@ -116,35 +93,28 @@ main li {
   margin-top: 20px;
 }
 
+li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 3px;
+    display: block;
+    padding: 0;
+}
+
 .games ul {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.games p {
-  top: -350px;
-  left: -20px;
+  position: relative;
+    margin-left: -20px;
 }
 
 .games h2 {
-    top: 0px;
+    position: relative;
+    margin: 0;
     left: 20px;
 }
 
 .games .video {
-  position: relative;
-  top: -30px;
-  left: 34%;
-}
-footer {
   position: absolute;
-  width: 100%;
-  background-color: #333333;
-  height: 75px;
-  margin-top: 255px;
-}
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  left: 40%;
 }

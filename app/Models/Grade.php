@@ -8,24 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Grade extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     /**
-     * Adds Result to the database
+     * Adds Result to the database and checks if the grade is higher than the previous
      */
-
     public function addResult($grade)
     {
-        if ($this->best_grade == null) {
-            $this->best_grade = $grade;
-            if ($grade >= $this->lowest_passing_grade) {
+        if ($grade > $this->best_grade) {
+            if ($this->best_grade < $this->lowest_passing_grade && $grade >= $this->lowest_passing_grade) {
                 $this->passed_at = now();
             }
-        } elseif ($grade > $this->best_grade) {
             $this->best_grade = $grade;
-            if ($grade > $this->lowest_passing_grade) {
-                $this->passed_at = now();
-            }
+            $this->save();
         }
-        $this->save();
     }
 }

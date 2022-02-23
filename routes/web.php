@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\GradesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,55 +21,57 @@ use App\Http\Controllers\ArticlesController;
 |
 */
 
-//Route::get('/posts/{post}', function ($post) {
-//    $posts = [
-//        'my-first-post' => 'Hello, this is my first blog post!',
-//        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-//    ];
-//
-//    if (!array_key_exists($post, $posts)) {
-//        abort(404, 'Sorry, that post was not found.');
-//    }
-//
-//    return view('post', [
-//        'post' => $posts[$post]
-//    ]);
-//});
-
 Route::get('/', [ViewController::class, 'show']);
-
 Route::get('/posts/{slug}', [PostsController::class, 'show']);
-
 Route::get('/profile', [ProfileController::class, 'show']);
-
 Route::get('/portfolio', [PortfolioController::class, 'show']);
-
 Route::get('/dashboard', [DashboardController::class, 'show']);
 
+// Shows all stored articles
 Route::get('/articles/index', [ArticlesController::class, function () {
     return view('articles.index', [
         'articles' => App\Models\Article::all()
     ]);
 }])->name('articles.index');
-
+// Stores newly added data
 Route::post('/articles', [ArticlesController::class, 'store']);
+// Shows creation page
 Route::get('/articles/create', [ArticlesController::class, 'create']);
+// Shows a specific article
 Route::get('/articles/{article}', [ArticlesController::class, 'show'])->name('articles.show');
-Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
+// Shows edit page of specific article
+Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit'])->name('articles.edit');
+// Updates stored data
 Route::put('/articles/{article}', [ArticlesController::class, 'update']);
+// Deletes a specific article
 Route::delete('/articles/{article}', [ArticlesController::class, 'destroy']);
 
-// GET articles
-// GET articles/create
-// POST /articles
-// GET articles/:id
-// GET articles/:id/edit
-// PUT /articles/:id
-// DELETE /articles/:id
-
+// Shows Index
 Route::get('/faqs/index', [FaqsController::class, 'show'])->name('faqs.index');
+// Stores new data
 Route::post('/faqs', [FaqsController::class, 'store']);
+// Shows creation page
 Route::get('/faqs/create', [FaqsController::class, 'create']);
-Route::get('/faqs/{faq}/edit', [FaqsController::class, 'edit']);
+// Show edit page
+Route::get('/faqs/{faq}/edit', [FaqsController::class, 'edit'])->name('faqs.edit');
+// Updates stored data
 Route::put('/faqs/{faq}', [FaqsController::class, 'update']);
+// Deletes specific data
 Route::delete('/faqs/{faq}', [FaqsController::class, 'destroy']);
+
+// Shows Index
+Route::get('/grades/index', [GradesController::class, function () {
+    return view('grades.index', [
+        'grades' => App\Models\Grade::all()
+    ]);
+}])->name('grades.index');
+// Stores new data
+Route::post('/grades', [GradesController::class, 'store']);
+// Shows creation page
+Route::get('/grades/create', [GradesController::class, 'create']);
+// Show edit page
+Route::get('/grades/{grade}/edit', [GradesController::class, 'edit'])->name('grades.edit');
+// Updates stored data
+Route::put('/grades/{grade}', [GradesController::class, 'update']);
+// Deletes specific data
+Route::delete('/grades/{grade}', [GradesController::class, 'destroy']);

@@ -1,13 +1,3 @@
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    position: relative;
-    color: white;
-    top: 0px;
-    margin: 0;
-    text-align: center;
-}
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -17,15 +7,13 @@ h2 {
     text-align: center;
 }
 
-body {
-background-color: #f0f0f0;
-background-repeat: no-repeat;
-background-image: none;
-background-size: cover;
-background-position: 50% 50%;
-overflow-x: hidden;
-background-image: linear-gradient(to right, #656565,#222222);
-padding-bottom: 20px;
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
 p {
@@ -37,12 +25,13 @@ p {
 }
 
 span {
-    top: 10px;
-    left: 10px;
     color: white;
-    margin: 0;
     position: fixed;
-    font-size:30px;
+    top: 48%;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 45px;
     cursor:pointer;
 }
 
@@ -89,80 +78,7 @@ span {
   }
 
 
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-
-  #main .monitor h2 {
-    top: 25px;
-  }
-
-  #main .blog p {
-    font-family: Calibri;
-    font-size: 20px;
-    color: black;
-    position: relative;
-    line-height: 10px;
-  }
-
-#main table, th, td {
-  border: 2px solid white;
-  border-collapse: collapse;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-#main table thead {
-background-color: #333333;
-color: white;
-}
-#main table tbody {
-  background-color: #EBECF0;
-}
-
-#main .monitor {
-  width: 970px;
-  height: 670px;
-  background-color: lightblue;
-  border-radius: 50px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 0;
-}
-
-progress {
-  width: 50%;
-  height: 40px;
-  margin-left: 25%;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 10px;
-
-}
-progress:after {
-  content: attr(value)'EC';
-  color: black;
-}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-
-#main footer {
-  position: absolute;
-  width: 101%;
-  background-color: #333333;
-  height: 75px;
-  left: -10px;
-  margin-top: 20px;
-}
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

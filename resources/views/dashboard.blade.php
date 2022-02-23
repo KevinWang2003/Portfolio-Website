@@ -128,7 +128,7 @@
         </section>
         <article>
             <div class="nbsa">
-                <h2>NBSA</h2>
+                <h3>NBSA</h3>
                 <p>Voordat je naar het volgende schooljaar kunt gaan moet je 45 of meer studiepunten behalen om door te gaan.</p>
                 <p>Als het jou niet lukt dan kan je niet meer aan het studieprogramma meedoen.</p>
                 <p>Als je de maximale 60 punten hebt behaald dan heb je je propedeuse gehaald en krijg je een speciale propedeuse diploma.</p>

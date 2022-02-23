@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 

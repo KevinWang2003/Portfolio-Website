@@ -1,8 +1,14 @@
 @extends('layout')
 
-<head>
-    <link rel="stylesheet" href="/css/show.css">
-</head>
+<style>
+    p {
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        position: relative;
+        text-align: center;
+    }
+</style>
 
 @section('content')
 

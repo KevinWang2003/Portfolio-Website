@@ -1,7 +1,6 @@
 @extends('layout')
 
 <head>
-<link rel="stylesheet" href="/css/create.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
 </head>
 
@@ -12,7 +11,6 @@
 
             <form method="POST" action="/articles">
                 @csrf
-
                 <div class="field">
                     <label class="label" for="title">Title</label>
 
@@ -31,7 +29,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="">Excerpt</label>
+                    <label class="label" for="excerpt">Excerpt</label>
 
                     <div class="control">
                         <textarea

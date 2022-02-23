@@ -10,18 +10,20 @@
         <h1>Frequently Asked Questions</h1>
         <section>
             @foreach($faqs as $faq)
-            <button type="button" class="collapsible">
-                <h2>{{ $faq->question }}</h2>
-            </button>
-            <div class="content">
-                @if(!$faq->link == null);
+                <button type="button" class="collapsible">
+                    <h2>{{ $faq->question }}</h2>
+                </button>
+                <div class="content">
+                    @if(!$faq->link == null);
                     <p><a href="//{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
-                @else;
+                    @else;
                     <p>{{ $faq->answer }}</p>
-                @endif
-            </div>
+                    @endif
+                    <a href="{{ route('faqs.edit', $faq) }}"><p>Edit</p></a>
+                </div>
             @endforeach
             <script src="/js/faq.js"></script>
         </section>
     </main>
 @endsection
+
