@@ -53,7 +53,7 @@ class GradeSeeder extends Seeder
             [
                 'course_id' => '6',
                 'test_name' => 'Assessment',
-                'best_grade' => '7.5',
+                'best_grade' => '9.4',
             ],
             [
                 'course_id' => '6',

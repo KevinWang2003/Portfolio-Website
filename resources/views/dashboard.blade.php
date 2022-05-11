@@ -72,21 +72,21 @@
                             <td>Framework Development 1</td>
                             <td>5</td>
                             <td>Case Study</td>
-                            <td>-</td>
+                            <td>9,9</td>
                         </tr>
                         <tr>
                             <td rowspan="3">Framework Project 1</td>
                             <td rowspan="3">7,5</td>
                             <td>Project</td>
-                            <td>-</td>
+                            <td>7,6</td>
                         </tr>
                         <tr>
                             <td>Assessment</td>
-                            <td>-</td>
+                            <td>9,4</td>
                         </tr>
                         <tr>
                             <td>Report</td>
-                            <td>-</td>
+                            <td>7,7</td>
                         </tr>
                         <tr>
                             <td rowspan="3">4</td>
