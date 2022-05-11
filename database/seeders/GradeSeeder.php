@@ -43,22 +43,22 @@ class GradeSeeder extends Seeder
             [
                 'course_id' => '5',
                 'test_name' => 'Case Study',
-                'best_grade' => '0',
+                'best_grade' => '9.9',
             ],
             [
                 'course_id' => '6',
                 'test_name' => 'Project',
-                'best_grade' => '0',
+                'best_grade' => '7.6',
             ],
             [
                 'course_id' => '6',
                 'test_name' => 'Assessment',
-                'best_grade' => '0',
+                'best_grade' => '7.5',
             ],
             [
                 'course_id' => '6',
                 'test_name' => 'Report',
-                'best_grade' => '0',
+                'best_grade' => '7.7',
             ],
             [
                 'course_id' => '7',
