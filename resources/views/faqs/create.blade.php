@@ -9,7 +9,7 @@
         <div id="page" class="container">
             <h1 class="heading has-text-weight-bold is-size-4">New FAQ</h1>
 
-            <form method="POST" action="/faqs">
+            <form method="POST" action="{{ route('faqs.store') }}">
                 @csrf
                 <div class="field">
                     <label class="label" for="question">Question</label>

@@ -17,7 +17,7 @@
                     @if(!$faq->link == null);
                     <p><a href="//{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
                     @else;
-                    <p>{{ $faq->answer }}</p>
+                    <p>{!! $faq->answer !!}</p>
                     @endif
                     <a href="{{ route('faqs.edit', $faq) }}"><p>Edit</p></a>
                 </div>

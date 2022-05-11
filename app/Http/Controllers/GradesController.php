@@ -47,7 +47,6 @@ class GradesController extends Controller
      */
     public function update(Request $request, Grade $grade)
     {
-//        $grade->update($this->validateGrade($request));
         $grade->addResult($request->best_grade);
         return redirect(route('grades.index'));
     }
@@ -70,7 +69,7 @@ class GradesController extends Controller
     public function validateGrade(Request $request): array
     {
         return $request->validate([
-            'course_name' => 'required',
+            'course_id' => 'required',
             'test_name' => 'required',
             'best_grade' => 'required'
         ]);

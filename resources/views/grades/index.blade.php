@@ -11,7 +11,7 @@
         <section>
             @foreach($grades as $grade)
                 <button type="button" class="collapsible">
-                    <h2>{{ $grade->course_name }}</h2>
+                    <h2>{{ $grade->name }}</h2>
                 </button>
                 <div class="content">
                     <p>Test: {{ $grade->test_name }}</p>

@@ -23,7 +23,7 @@
             <li class="{{ Request::path() === 'portfolio' ? 'active' : '' }}"><a href="/portfolio">Portfolio</a></li>
             <li class="{{ Request::path() === 'dashboard' ? 'active' : '' }}"><a href="/dashboard">Dashboard</a></li>
             <li class="{{ Request::path() === 'index' ? 'active' : '' }}"><a href="/articles/index">Blog</a></li>
-            <li class="{{ Request::path() === 'index' ? 'active' : '' }}"><a href="/faqs/index">FAQ</a></li>
+            <li class="{{ Request::route()->getName() === 'faqs.index' ? 'active' : '' }}"><a href="{{ route('faqs.index') }}">FAQ</a></li>
         </ul>
     </nav>
 </header>

@@ -10,7 +10,7 @@
         <div id="page" class="container">
             <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
 
-            <form method="POST" action="/faqs/{{ $faq->id }}">
+            <form method="POST" action="{{ route('faqs.update', $faq) }}">
                 @csrf
                 @method('PUT')
                 <div class="field">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </form>
-            <form method="POST" action="/faqs/{{ $faq->id }}">
+            <form method="POST" action="{{ route('faqs.destroy', $faq) }}">
                 <div class="control">
                     @csrf
                     @method('DELETE')

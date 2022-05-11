@@ -47,17 +47,7 @@ Route::put('/articles/{article}', [ArticlesController::class, 'update']);
 Route::delete('/articles/{article}', [ArticlesController::class, 'destroy']);
 
 // Shows Index
-Route::get('/faqs/index', [FaqsController::class, 'show'])->name('faqs.index');
-// Stores new data
-Route::post('/faqs', [FaqsController::class, 'store']);
-// Shows creation page
-Route::get('/faqs/create', [FaqsController::class, 'create']);
-// Show edit page
-Route::get('/faqs/{faq}/edit', [FaqsController::class, 'edit'])->name('faqs.edit');
-// Updates stored data
-Route::put('/faqs/{faq}', [FaqsController::class, 'update']);
-// Deletes specific data
-Route::delete('/faqs/{faq}', [FaqsController::class, 'destroy']);
+Route::resource('/faqs', FaqsController::class);
 
 // Shows Index
 Route::get('/grades/index', [GradesController::class, function () {
@@ -68,7 +58,7 @@ Route::get('/grades/index', [GradesController::class, function () {
 // Stores new data
 Route::post('/grades', [GradesController::class, 'store']);
 // Shows creation page
-Route::get('/grades/create', [GradesController::class, 'create']);
+Route::get('/grades/create', [GradesController::class, 'create'])->name('grades.create');
 // Show edit page
 Route::get('/grades/{grade}/edit', [GradesController::class, 'edit'])->name('grades.edit');
 // Updates stored data

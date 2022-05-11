@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class FaqsController extends Controller
 {
+
     /**
-     * shows FAQ page
+     * The Index of the article page
      */
-    public function show()
+    public function index()
     {
-        return view('/faqs/index', [
-            'faqs' => Faq::all()
-        ]);
+        $faqs = Faq::all();
+        return view('faqs.index', compact('faqs'));
     }
 
     /**
