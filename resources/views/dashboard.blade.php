@@ -28,100 +28,100 @@
                 <h2>Study Monitor</h2>
                 <table>
                     <thead>
-                        <tr>
-                            <td>Quartile</td>
-                            <td>Course</td>
-                            <td>EC</td>
-                            <td>Exam</td>
-                            <td>Grade</td>
-                        </tr>
+                    <tr>
+                        <td>Quartile</td>
+                        <td>Course</td>
+                        <td>EC</td>
+                        <td>Exam</td>
+                        <td>Grade</td>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td rowspan="3">1</td>
-                            <td>Programme and Case Orientation</td>
-                            <td>2,5</td>
-                            <td>Assessment</td>
-                            <td>9,1</td>
-                        </tr>
-                        <tr>
-                            <td>Computer Science & Basics</td>
-                            <td>7,5</td>
-                            <td>Written</td>
-                            <td>8,2</td>
-                        </tr>
-                        <tr>
-                            <td>Programming Basics</td>
-                            <td>5</td>
-                            <td>Case Study Exam</td>
-                            <td>10,0</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">2</td>
-                            <td rowspan="2">Object Oriented Programming</td>
-                            <td rowspan="2">10</td>
-                            <td>Case study</td>
-                            <td>7,0</td>
-                        </tr>
-                        <tr>
-                            <td>Project</td>
-                            <td>7,8</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">3</td>
-                            <td>Framework Development 1</td>
-                            <td>5</td>
-                            <td>Case Study</td>
-                            <td>9,9</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Framework Project 1</td>
-                            <td rowspan="3">7,5</td>
-                            <td>Project</td>
-                            <td>7,6</td>
-                        </tr>
-                        <tr>
-                            <td>Assessment</td>
-                            <td>9,4</td>
-                        </tr>
-                        <tr>
-                            <td>Report</td>
-                            <td>7,7</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">4</td>
-                            <td rowspan="3">Framework Project 2</td>
-                            <td rowspan="3">10</td>
-                            <td>Portfolio</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Project</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Assessment</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">The Entire Year</td>
-                            <td>Portfolio</td>
-                            <td>12,5</td>
-                            <td>Assessment</td>
-                            <td>7,5</td>
-                        </tr>
-                        <tr>
-                            <td>Personality 1</td>
-                            <td>1,25</td>
-                            <td>Portfolio</td>
-                            <td>Ok</td>
-                        </tr>
-                        <tr>
-                            <td>Personality 2</td>
-                            <td>1,25</td>
-                            <td>Portfolio</td>
-                            <td>-</td>
-                        </tr>
+                    <tr>
+                        <td rowspan="3">1</td>
+                        <td>Programme and Case Orientation</td>
+                        <td>2,5</td>
+                        <td>Assessment</td>
+                        <td>9,1</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science & Basics</td>
+                        <td>7,5</td>
+                        <td>Written</td>
+                        <td>8,2</td>
+                    </tr>
+                    <tr>
+                        <td>Programming Basics</td>
+                        <td>5</td>
+                        <td>Case Study Exam</td>
+                        <td>10,0</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2</td>
+                        <td rowspan="2">Object Oriented Programming</td>
+                        <td rowspan="2">10</td>
+                        <td>Case study</td>
+                        <td>7,0</td>
+                    </tr>
+                    <tr>
+                        <td>Project</td>
+                        <td>7,8</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">3</td>
+                        <td>Framework Development 1</td>
+                        <td>5</td>
+                        <td>Case Study</td>
+                        <td>9,9</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Framework Project 1</td>
+                        <td rowspan="3">7,5</td>
+                        <td>Project</td>
+                        <td>7,6</td>
+                    </tr>
+                    <tr>
+                        <td>Assessment</td>
+                        <td>9,4</td>
+                    </tr>
+                    <tr>
+                        <td>Report</td>
+                        <td>7,7</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">4</td>
+                        <td rowspan="3">Framework Project 2</td>
+                        <td rowspan="3">10</td>
+                        <td>Portfolio</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Project</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Assessment</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">The Entire Year</td>
+                        <td>Portfolio</td>
+                        <td>12,5</td>
+                        <td>Assessment</td>
+                        <td>7,5</td>
+                    </tr>
+                    <tr>
+                        <td>Personality 1</td>
+                        <td>1,25</td>
+                        <td>Portfolio</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>Personality 2</td>
+                        <td>1,25</td>
+                        <td>Portfolio</td>
+                        <td>-</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>

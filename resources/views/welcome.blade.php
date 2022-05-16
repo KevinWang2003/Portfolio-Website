@@ -7,7 +7,7 @@
 
 @section('content')
 <main>
-    <h1>Home</h1>
+    <h1>Dashboard</h1>
     <div class="motivatie">
         <h2>Motivatie</h2>
         <p>Ik was al van jong af aan geinteresseert in computers en games.</p>
