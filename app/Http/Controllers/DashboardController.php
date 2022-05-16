@@ -7,7 +7,7 @@ class DashboardController
     /**
      * shows dashboard
      */
-    public function show()
+    public function index()
     {
         return view('dashboard');
     }

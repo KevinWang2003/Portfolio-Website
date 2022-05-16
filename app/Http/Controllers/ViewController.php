@@ -7,7 +7,7 @@ class ViewController
     /**
      * shows homepage
      */
-    public function show()
+    public function index()
     {
         return view('welcome');
     }

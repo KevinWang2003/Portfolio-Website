@@ -107,20 +107,20 @@
                             <td rowspan="3">The Entire Year</td>
                             <td>Portfolio</td>
                             <td>12,5</td>
-                            <td></td>
-                            <td></td>
+                            <td>Assessment</td>
+                            <td>7,5</td>
                         </tr>
                         <tr>
                             <td>Personality 1</td>
                             <td>1,25</td>
-                            <td></td>
-                            <td></td>
+                            <td>Portfolio</td>
+                            <td>Ok</td>
                         </tr>
                         <tr>
                             <td>Personality 2</td>
                             <td>1,25</td>
-                            <td></td>
-                            <td></td>
+                            <td>Portfolio</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

@@ -7,8 +7,9 @@ class PortfolioController
     /**
      * shows portfolio
      */
-    public function show()
+    public function index()
     {
+        abort(500);
         return view('portfolio');
     }
 }
