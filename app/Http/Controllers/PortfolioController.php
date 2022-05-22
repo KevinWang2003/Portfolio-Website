@@ -9,7 +9,6 @@ class PortfolioController
      */
     public function index()
     {
-        abort(500);
         return view('portfolio');
     }
 }

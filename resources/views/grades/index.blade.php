@@ -1,7 +1,6 @@
-@extends('layout')
+@extends('common.layout')
 
 <head>
-    <link rel="stylesheet" href="/css/faq.css">
     <title>Grade List</title>
 </head>
 

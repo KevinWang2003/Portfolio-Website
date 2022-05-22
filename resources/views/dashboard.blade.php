@@ -1,7 +1,6 @@
-@extends('layout')
+@extends('common.layout')
 
 <head>
-    <link rel="stylesheet" href="css/dashboard.css">
     <script src="js/sidenav.js"></script>
     <title>Dashboard</title>
 </head>
@@ -12,10 +11,15 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
         <img src="resources/HZ logo.png" alt="HZ logo" width="300px" height="300px">
-        <li><a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank">Examenregeling</a></li>
-        <li><a href="https://hz.nl/uploads/documents/Regelingen/OERS/2019-2020/2020-2021-ICT-Implementation-Regulations-CER-HZ-DEF1.0.pdf" target="_blank">Uitvoeringeregeling</a></li>
+        <li><a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank">Examenregeling</a>
+        </li>
+        <li>
+            <a href="https://hz.nl/uploads/documents/Regelingen/OERS/2019-2020/2020-2021-ICT-Implementation-Regulations-CER-HZ-DEF1.0.pdf"
+               target="_blank">Uitvoeringeregeling</a></li>
         <li><a href="https://learn.hz.nl" target="_blank">HZ Learn</a></li>
-        <li><a href="https://teams.microsoft.com/l/channel/19%3a827654897ab746089c081f24aff1c984%40thread.skype/General?groupId=337e8cca-f67d-4132-9fa9-b0c761bbeb94&tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c" target="_blank">Teams</a></li>
+        <li>
+            <a href="https://teams.microsoft.com/l/channel/19%3a827654897ab746089c081f24aff1c984%40thread.skype/General?groupId=337e8cca-f67d-4132-9fa9-b0c761bbeb94&tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c"
+               target="_blank">Teams</a></li>
         <li><a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank">Studievoortgang</a></li>
         <li><a href="https://github.com/HZ-HBO-ICT" target="_blank">Github</a></li>
     </div>
@@ -129,15 +133,16 @@
         <article>
             <div class="nbsa">
                 <h3>NBSA</h3>
-                <p>Voordat je naar het volgende schooljaar kunt gaan moet je 45 of meer studiepunten behalen om door te gaan.</p>
+                <p>Voordat je naar het volgende schooljaar kunt gaan moet je 45 of meer studiepunten behalen om door te
+                    gaan.</p>
                 <p>Als het jou niet lukt dan kan je niet meer aan het studieprogramma meedoen.</p>
-                <p>Als je de maximale 60 punten hebt behaald dan heb je je propedeuse gehaald en krijg je een speciale propedeuse diploma.</p>
+                <p>Als je de maximale 60 punten hebt behaald dan heb je je propedeuse gehaald en krijg je een speciale
+                    propedeuse diploma.</p>
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
                 <progress class="nodig" max="60" value="45">45 SC</progress>
                 <p>En dit is waar ik nu ben:</p>
                 <progress class="nodig" max="60" value="25">25 SC</progress>
             </div>
         </article>
-        <footer><img class="logo" src="resources/HZ logo.png" width="75px" height="75px" alt="HZ Logo"></footer>
     </div>
 @endsection
