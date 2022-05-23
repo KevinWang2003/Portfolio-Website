@@ -21,6 +21,16 @@ use App\Http\Controllers\GradesController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 Route::resource('/', ViewController::class);
 Route::resource('/profile', ProfileController::class);
 Route::resource('/portfolio', PortfolioController::class);

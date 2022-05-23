@@ -1,10 +1,11 @@
-@extends('layout')
+@extends('common.layout')
 
 <style>
-    p {
+     .show p {
         font-family: Calibri;
         font-size: 20px;
-        color: white;
+        color: black;
+        line-height: 20px;
         position: relative;
         text-align: center;
     }
@@ -12,8 +13,9 @@
 
 @section('content')
 
-    <h1>{{ $article->title }}</h1>
-    <p>{!! $article->body !!}</p>
-
+    <div class="show">
+        <h1>{{ $article->title }}</h1>
+        <p>{!! $article->body !!}</p>
+    </div>
 
 @endsection

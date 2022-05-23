@@ -1,7 +1,7 @@
-@extends('layout')
+@extends('common.layout')
 
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
 </head>>
 
 @section('content')
@@ -53,7 +53,7 @@
                             name="best_grade"
                             id="best_grade"
                             value="{{ old('best_grade') }}"
-                            >
+                        >
                         @error('best_grade')
                         <p class="help is-danger">{{ $errors->first('best_grade') }}</p>
                         @enderror

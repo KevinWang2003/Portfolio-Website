@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('common.layout')
 
 <head>
     <link rel="stylesheet" href="/css/create.css">
