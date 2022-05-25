@@ -13,7 +13,9 @@
                 <div class="content">
                     <p>{{ $article->excerpt }}</p>
                     <a href="{{ route('articles.show', $article) }}"><p>Lees meer..</p></a>
+                    @if(Auth::check())
                     <a href="{{ route('articles.edit', $article) }}"><p>Edit</p></a>
+                    @endif
                 </div>
             @endforeach
             <script src="/js/faq.js"></script>

@@ -20,7 +20,9 @@
                         ;
                         <p>{!! $faq->answer !!}</p>
                     @endif
+                    @if(Auth::check())
                     <a href="{{ route('faqs.edit', $faq) }}"><p>Edit</p></a>
+                        @endif
                 </div>
             @endforeach
             <script src="/js/faq.js"></script>

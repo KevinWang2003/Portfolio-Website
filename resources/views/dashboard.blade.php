@@ -6,7 +6,7 @@
 </head>
 
 @section('content')
-    <span onclick="toggleNav()">&#9776;</span>
+    <span class="openbtn" onclick="toggleNav()"><i class="fas fa-arrow-right"></i></span>
     <!--Menu aan de zijkant-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
@@ -141,7 +141,7 @@
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
                 <progress class="nodig" max="60" value="45">45 SC</progress>
                 <p>En dit is waar ik nu ben:</p>
-                <progress class="nodig" max="60" value="25">25 SC</progress>
+                <progress class="nodig" max="60" value="48.75">48,75 SC</progress>
             </div>
         </article>
     </div>

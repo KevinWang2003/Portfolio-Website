@@ -11,7 +11,7 @@
                     <div class="col">
                     <h2>Persoonlijke Gegevens:</h2>
                         <p>Naam: Kevin Wang</p>
-                        <p>Leeftijd: 17 (Bijna 18)</p>
+                        <p>Leeftijd: 18</p>
                         <p>Geboortedatum: 09-12-2003</p>
                         <p>Woonplaats: Yerseke</p>
                         <p>Afgestudeerde scholen:</p>
