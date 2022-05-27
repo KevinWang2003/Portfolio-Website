@@ -15,7 +15,7 @@
                 <div class="content">
                     @if(!$faq->link == null)
                         ;
-                        <p><a href="//{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
+                        <p><a href="{{ $faq->link }}" target="_blank">{{ $faq->answer }}</a></p>
                     @else
                         ;
                         <p>{!! $faq->answer !!}</p>
