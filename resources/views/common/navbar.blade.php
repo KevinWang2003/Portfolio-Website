@@ -6,7 +6,7 @@
             <li class="{{ Request::path() === 'profile' ? 'active' : '' }}"><a href="/profile">Profile</a></li>
             <li class="{{ Request::path() === 'portfolio' ? 'active' : '' }}"><a href="/portfolio">Portfolio</a></li>
             <li class="{{ Request::path() === 'dashboard' ? 'active' : '' }}"><a href="/dashboard">Dashboard</a></li>
-            <li class="{{ Request::path() === 'index' ? 'active' : '' }}"><a href="/articles/index">Blog</a></li>
+            <li class="{{ Request::path() === 'index' ? 'active' : '' }}"><a href="{{ route('articles.index') }}">Blog</a></li>
             <li class="{{ Request::path() === 'faqs' ? 'active' : '' }}"><a href="{{ route('faqs.index') }}">FAQ</a>
             </li>
                 @if(Auth::check())
