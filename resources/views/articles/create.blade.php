@@ -53,6 +53,7 @@
                             class="textarea @error('body') is-danger @enderror"
                             name="body"
                             id="body"
+                            placeholder="Voordat ik op deze school kwam, werkte ik bij .........."
                         >{{ old('body') }}</textarea>
                         @error('body')
                         <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De textvlak mag niet leeg zijn</p>

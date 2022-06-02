@@ -15,7 +15,7 @@
                 @method('PUT')
 
                 <div class="field">
-                    <label class="label" for="title">Title</label>
+                    <label class="label" for="title">Titel *</label>
 
                     <div class="control">
                         <input
@@ -23,6 +23,7 @@
                             type="text"
                             name="title"
                             id="title"
+                            placeholder="Mijn werkervaring"
                             value="{{ $article->title }}"
                         >
                         @error('title')
@@ -32,13 +33,14 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="excerpt">Excerpt</label>
+                    <label class="label" for="excerpt">Subtitel *</label>
 
                     <div class="control">
                         <textarea
                             class="textarea @error('excerpt') is-danger @enderror"
                             name="excerpt"
                             id="excerpt"
+                            placeholder="Dit artikel gaat over mijn werkervaring"
                         >{{ $article->excerpt }}</textarea>
                         @error('excerpt')
                         <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De subtitel mag niet leeg zijn</p>
@@ -54,6 +56,7 @@
                             class="textarea @error('body') is-danger @enderror"
                             name="body"
                             id="body"
+                            placeholder="Voordat ik op deze school kwam, werkte ik bij .........."
                         >{{ $article->body }}</textarea>
                         @error('body')
                         <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De textvlak mag niet leeg zijn</p>
