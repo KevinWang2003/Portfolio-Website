@@ -128,6 +128,10 @@ p {
 
 /* Blog */
 
+.blog {
+    margin-bottom: 80px;
+}
+
 .content {
     padding: 0 18px;
     background-color: lightblue;
@@ -186,6 +190,10 @@ p {
 }
 
 /* FAQ */
+
+.faq {
+    margin-bottom: 235px;
+}
 
 .faq h2 {
     position: relative;
@@ -402,6 +410,11 @@ progress:after {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+#page {
+    background-color: white;
+    margin-bottom: 246px;
 }
 
 /* Footer */

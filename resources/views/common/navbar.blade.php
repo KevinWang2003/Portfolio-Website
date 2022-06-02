@@ -2,7 +2,7 @@
     <!--Navigatie Menu-->
     <nav>
         <ul>
-            <li class="{{ Request::path() === '/' ? 'active' : '' }}"><a href="/"><i class="fas fa-home"></i></a></li>
+            <li class="{{ Request::path() === '/' ? 'active' : '' }}"><a href="/"><img src="/resources/Home-icon.png" width="27px" height="27px" style="color: white" alt="home"></a></li>
             <li class="{{ Request::path() === 'profile' ? 'active' : '' }}"><a href="/profile">Profile</a></li>
             <li class="{{ Request::path() === 'portfolio' ? 'active' : '' }}"><a href="/portfolio">Portfolio</a></li>
             <li class="{{ Request::path() === 'dashboard' ? 'active' : '' }}"><a href="/dashboard">Dashboard</a></li>

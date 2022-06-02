@@ -7,7 +7,7 @@
 @section('content')
     <main>
         <h1>Grade List</h1>
-        <section>
+        <section class="grades">
             @foreach($grades as $grade)
                 <button type="button" class="collapsible">
                     <h2>{{ $grade->name }}</h2>
