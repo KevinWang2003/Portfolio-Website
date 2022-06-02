@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
@@ -30,7 +31,12 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        if(Auth::check()) {
+            return view('articles.create');
+        } else {
+            abort(401);
+        }
+
     }
 
     /**
@@ -47,7 +53,11 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-        return view('articles.edit', compact('article'));
+        if (Auth::check()) {
+            return view('articles.edit', compact('article'));
+        } else {
+            abort(401);
+        }
     }
 
     /**

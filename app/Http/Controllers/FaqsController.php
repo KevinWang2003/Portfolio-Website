@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Faq;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FaqsController extends Controller
 {
@@ -22,7 +23,11 @@ class FaqsController extends Controller
      */
     public function create()
     {
-        return view('faqs.create');
+        if (Auth::check()) {
+            return view('faqs.create');
+        } else {
+            abort(401);
+        }
     }
 
     /**
@@ -39,7 +44,11 @@ class FaqsController extends Controller
      */
     public function edit(Faq $faq)
     {
-        return view('faqs.edit', compact('faq'));
+        if (Auth::check()){
+            return view('faqs.edit', compact('faq'));
+        } else {
+            abort(401);
+        }
     }
 
     /**

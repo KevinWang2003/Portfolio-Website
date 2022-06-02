@@ -132,6 +132,10 @@ p {
     margin-bottom: 80px;
 }
 
+.create {
+    position: relative;
+}
+
 .content {
     padding: 0 18px;
     background-color: lightblue;
