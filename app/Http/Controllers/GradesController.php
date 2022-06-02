@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GradesController extends Controller
 {
@@ -12,9 +13,13 @@ class GradesController extends Controller
      */
     public function index()
     {
-        return view('/grades/index', [
-            'grades' => Grade::all()
-        ]);
+        if (Auth::check()) {
+            return view('/grades/index', [
+                'grades' => Grade::all()
+            ]);
+        } else {
+            abort(401);
+        }
     }
 
     /**
@@ -22,7 +27,11 @@ class GradesController extends Controller
      */
     public function create()
     {
-        return view('grades.create');
+        if (Auth::check()) {
+            return view('grades.create');
+        } else {
+            abort(401);
+        }
     }
 
     /**
@@ -39,7 +48,11 @@ class GradesController extends Controller
      */
     public function edit(Grade $grade)
     {
+        if (Auth::check()) {
         return view('grades.edit', compact('grade'));
+        } else {
+            abort(401);
+        }
     }
 
     /**

@@ -10,7 +10,7 @@
         <section>
             @if(Auth::check())
                 <div class="d-grid mx-auto justify-content-md-center">
-                    <a class="btn btn-secondary create" href="/articles/create">Nieuwe Artikel</a>
+                    <a class="btn btn-secondary create" href="/faqs/create">Nieuwe Vraag</a>
                 </div>
             @endif
             <div class="col mt-2">
