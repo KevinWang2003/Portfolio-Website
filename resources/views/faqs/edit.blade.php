@@ -7,13 +7,14 @@
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
+            <h1>Update Article</h1>
+            <p class="require">* = vereist</p>
 
             <form method="POST" action="{{ route('faqs.update', $faq) }}">
                 @csrf
                 @method('PUT')
                 <div class="field">
-                    <label class="label" for="question">Question</label>
+                    <label class="label" for="question">Vraag *</label>
 
                     <div class="control">
                         <input
@@ -24,13 +25,13 @@
                             value="{{ $faq->question }}"
                         >
                         @error('question')
-                        <p class="help is-danger">{{ $errors->first('question') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De vraag mag niet leeg zijn.</p>
                         @enderror
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="answer">Answer</label>
+                    <label class="label" for="answer">Antwoord *</label>
 
                     <div class="control">
                         <textarea
@@ -39,7 +40,7 @@
                             id="answer"
                         >{{ $faq->answer }}</textarea>
                         @error('answer')
-                        <p class="help is-danger">{{ $errors->first('answer') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Het antwoord mag niet leeg zijn.</p>
                         @enderror
                     </div>
                 </div>
@@ -52,13 +53,12 @@
                     </div>
                 </div>
 
-                <div class="field is-grouped">
+                <div class="field is-grouped justify-content-between">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <a class="button is-text" href="/faqs">Annuleren</a>
                     </div>
-
                     <div class="control">
-                        <button class="button is-text">Cancel</button>
+                        <button class="button is-link" type="submit">Verzenden</button>
                     </div>
                 </div>
             </form>

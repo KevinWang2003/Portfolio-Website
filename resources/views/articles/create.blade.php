@@ -7,12 +7,12 @@
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">New Article</h1>
-
+            <h1>Nieuwe Artikel</h1>
+            <p class="require">* = vereist</p>
             <form method="POST" action="/articles">
                 @csrf
                 <div class="field">
-                    <label class="label" for="title">Title</label>
+                    <label class="label" for="title">Titel *</label>
 
                     <div class="control">
                         <input
@@ -21,30 +21,32 @@
                             name="title"
                             id="title"
                             value="{{ old('title') }}"
+                            placeholder="Mijn werkervaring"
                         >
                         @error('title')
-                        <p class="help is-danger">{{ $errors->first('title') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De titel mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="excerpt">Excerpt</label>
+                    <label class="label" for="excerpt">Subtitel *</label>
 
                     <div class="control">
                         <textarea
                             class="textarea @error('excerpt') is-danger @enderror"
                             name="excerpt"
                             id="excerpt"
+                            placeholder="Dit artikel gaat over mijn werkervaring"
                         >{{ old('excerpt') }}</textarea>
                         @error('excerpt')
-                        <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De subtitel mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="" Body>Body</label>
+                    <label class="label" for="">Text *</label>
 
                     <div class="control">
                         <textarea
@@ -53,18 +55,17 @@
                             id="body"
                         >{{ old('body') }}</textarea>
                         @error('body')
-                        <p class="help is-danger">{{ $errors->first('body') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De textvlak mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
 
-                <div class="field is-grouped">
+                <div class="field is-grouped justify-content-between">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <a class="button is-text" href="/articles">Annuleren</a>
                     </div>
-
                     <div class="control">
-                        <button class="button is-text">Cancel</button>
+                        <button class="button is-link" type="submit">Verzenden</button>
                     </div>
                 </div>
             </form>

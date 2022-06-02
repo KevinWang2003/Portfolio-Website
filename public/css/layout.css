@@ -132,6 +132,11 @@ p {
     margin-bottom: 80px;
 }
 
+.require {
+    color: black;
+    float: right;
+}
+
 .create {
     position: relative;
 }
@@ -191,6 +196,12 @@ p {
 
 .blog .active, .collapsible:hover {
     background-color: #ccc;
+}
+
+.help {
+    margin-top: 3px;
+    margin-left: -10px;
+    font-size: 15px;
 }
 
 /* FAQ */

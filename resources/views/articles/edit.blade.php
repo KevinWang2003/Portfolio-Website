@@ -7,7 +7,8 @@
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
+            <h1>Update Article</h1>
+            <p class="require">* = vereist</p>
 
             <form method="POST" action="/articles/{{ $article->id }}">
                 @csrf
@@ -25,7 +26,7 @@
                             value="{{ $article->title }}"
                         >
                         @error('title')
-                        <p class="help is-danger">{{ $errors->first('title') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De titel mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
@@ -40,7 +41,7 @@
                             id="excerpt"
                         >{{ $article->excerpt }}</textarea>
                         @error('excerpt')
-                        <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De subtitel mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
@@ -55,25 +56,23 @@
                             id="body"
                         >{{ $article->body }}</textarea>
                         @error('body')
-                        <p class="help is-danger">{{ $errors->first('body') }}</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De textvlak mag niet leeg zijn</p>
                         @enderror
                     </div>
                 </div>
 
-                <div class="field is-grouped">
+                <div class="field is-grouped justify-content-between">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <a class="button is-text" href="/articles">Annuleren</a>
                     </div>
-
                     <div class="control">
-                        <button class="button is-text">Cancel</button>
+                        <button class="button is-link" type="submit">Verzenden</button>
                     </div>
-
                 </div>
             </form>
 
             <form method="POST" action="/articles/{{ $article->id }}">
-                <div class="control">
+                <div class="control delete">
                     @csrf
                     @method('DELETE')
                     <button class="button is-danger" type="submit">Delete</button>
