@@ -13,7 +13,7 @@ class GradesController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->role == 'admin') {
             return view('/grades/index', [
                 'grades' => Grade::all()
             ]);
@@ -27,7 +27,7 @@ class GradesController extends Controller
      */
     public function create()
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->role == 'admin') {
             return view('grades.create');
         } else {
             abort(401);
@@ -48,7 +48,7 @@ class GradesController extends Controller
      */
     public function edit(Grade $grade)
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->role == 'admin') {
         return view('grades.edit', compact('grade'));
         } else {
             abort(401);

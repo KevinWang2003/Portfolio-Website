@@ -31,7 +31,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        if(Auth::check()) {
+        if(Auth::check() && Auth::user()->role == 'admin') {
             return view('articles.create');
         } else {
             abort(401);
@@ -53,7 +53,7 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->role == 'admin') {
             return view('articles.edit', compact('article'));
         } else {
             abort(401);
