@@ -9,6 +9,7 @@
         <h1>Dashboard</h1>
         <div class="container">
             <h2>Motivatie</h2>
+            <p>Dit is een voorbeeld voor assignment 4 van DevOps</p>
             <p>Ik was al van jong af aan geinteresseert in computers en games.</p>
             <p>Dit kwam doordat ik vroeger veel gaming youtubers had gezien.</p>
             <p>Door het kijken van die youtubers werd ik al snel geinspireert om zelf ook te gaan gamen, ben
