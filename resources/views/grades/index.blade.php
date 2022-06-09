@@ -17,7 +17,7 @@
                     <p>Passing Grade: {{ $grade->lowest_passing_grade }}</p>
                     <p>Current Grade: {{ $grade->best_grade }}</p>
                     <p>Passed at: {{ $grade->passed_at }}</p>
-                    @if(Auth::check())
+                    @if(Auth::check() && Auth::user()->role == 'admin')
                     <a href="{{ route('grades.edit', $grade) }}"><p>Edit</p></a>
                     @endif
                 </div>
