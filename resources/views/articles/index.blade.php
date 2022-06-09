@@ -8,7 +8,7 @@
     <main>
         <section class="blog">
             <h1>Blog</h1>
-            @if(Auth::check())
+            @if(Auth::check() && Auth::user()->role == 'admin')
             <div class="d-grid mx-auto justify-content-md-center">
                 <a class="btn btn-secondary create" href="/articles/create">Nieuwe Artikel</a>
             </div>
