@@ -19,7 +19,7 @@
                     <div class="content">
                         <p>{{ $article->excerpt }}</p>
                         <a href="{{ route('articles.show', $article) }}"><p>Lees meer..</p></a>
-                        @if(Auth::check())
+                        @if(Auth::check() && Auth::user()->role == 'admin')
                             <a href="{{ route('articles.edit', $article) }}"><p>Edit</p></a>
                         @endif
                     </div>
