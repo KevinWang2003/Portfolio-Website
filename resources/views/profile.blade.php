@@ -20,7 +20,7 @@
                         <p>Havo Natuur en Techniek</p>
                     </div>
                     <div class="col">
-                    <img class="sideimg" src="resources/Mijn foto.jpg" alt="Selfie" width="217px" height="363px">
+                    <img class="sideimg" src="resources/Mijn foto.jpg" alt="Selfie" width="437px" height="409px">
                     </div>
                 </div>
             </div>
