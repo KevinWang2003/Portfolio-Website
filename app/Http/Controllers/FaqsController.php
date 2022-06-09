@@ -44,7 +44,7 @@ class FaqsController extends Controller
      */
     public function edit(Faq $faq)
     {
-        if (Auth::check()){
+        if (Auth::check() && Auth::user()->role == 'admin'){
             return view('faqs.edit', compact('faq'));
         } else {
             abort(401);
