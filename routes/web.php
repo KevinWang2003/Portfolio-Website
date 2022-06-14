@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PortfolioController;
@@ -27,6 +28,9 @@ require __DIR__.'/auth.php';
 
 // Welcome page
 Route::resource('/', ViewController::class);
+
+// Anime list
+Route::resource('/anime', AnimeController::class);
 
 // Profile
 Route::resource('/profile', ProfileController::class);
