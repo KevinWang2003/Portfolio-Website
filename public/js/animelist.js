@@ -82,7 +82,7 @@ async function refreshPage(indicator, amount) {
 
 async function getCount(){
     try {
-        let response = await fetch("https://kitsu.io/api/edge/users/1288764/library-entries?page");
+        let response = await fetch("https://kitsu.io/api/edge/users/1288764/library-entries?page&filter[status]=completed");
         let data = await response.json();
         let count = data.meta.count;
         return count;
