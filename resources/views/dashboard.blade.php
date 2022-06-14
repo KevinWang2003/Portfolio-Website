@@ -124,7 +124,7 @@
                         <td>Personality 2</td>
                         <td>1,25</td>
                         <td>Portfolio</td>
-                        <td>-</td>
+                        <td>Ok</td>
                     </tr>
                     </tbody>
                 </table>
@@ -139,9 +139,9 @@
                 <p>Als je de maximale 60 punten hebt behaald dan heb je je propedeuse gehaald en krijg je een speciale
                     propedeuse diploma.</p>
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
-                <progress class="nodig" max="60" value="45">45 SC</progress>
+                <progress class="nodig" max="60" value="45">45 EC</progress>
                 <p>En dit is waar ik nu ben:</p>
-                <progress class="nodig" max="60" value="48.75">48,75 SC</progress>
+                <progress class="nodig" max="60" value="50">50 EC</progress>
             </div>
         </article>
     </div>
