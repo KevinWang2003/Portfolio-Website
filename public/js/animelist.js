@@ -1,5 +1,14 @@
 
 async function init() {
+    // try {
+    //     let response = await fetch("https://kitsu.io/api/edge/users?filter[name]=xTheNightShade");
+    //     let data = await response.json();
+    //     console.log(data)
+    //     return data
+    // } catch (err) {
+    //     console.error("Error: ", err);
+    // }
+
     const count = await getCount();
     const amount = Math.ceil(count / 5);
     console.log(amount);
@@ -30,6 +39,8 @@ async function init() {
 
 }
 
+
+
 async function updatePage(list, indicator, amount) {
     const domElement = document.getElementById("anime");
     domElement.innerHTML = "";
@@ -48,6 +59,7 @@ async function updatePage(list, indicator, amount) {
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">${anime.relatedAnime.attributes.canonicalTitle}</h5>
+                                    <a style="color: black; line-height: 20px" class="card-text" href="https://kitsu.io/anime/${anime.relatedAnime.id}" target="_blank">https://kitsu.io/anime/${anime.relatedAnime.id}</a>
                                     <p style="color: black; margin-top: 30px" class="card-text">My Rating: ${anime.rating.rating} / 5.0</p>
                                     <p style="color: black" class="card-text">Status: ${anime.relatedAnime.attributes.status}</p>
                                     <p style="color: black; margin-top: -10px; line-height: 20px" class="card-text">${anime.relatedAnime.attributes.description}</p>
