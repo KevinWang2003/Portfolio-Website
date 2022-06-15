@@ -24,7 +24,7 @@
                             placeholder="Mijn werkervaring"
                         >
                         @error('title')
-                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De titel mag niet leeg zijn</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Voer een titel in (bijvoorbeeld: Mijn Kennis)</p>
                         @enderror
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                             placeholder="Dit artikel gaat over mijn werkervaring"
                         >{{ old('excerpt') }}</textarea>
                         @error('excerpt')
-                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De subtitel mag niet leeg zijn</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Voer een subtitel in. (Bijvoorbeeld: Dit artikel gaat over mijn kennis in het programmeren)</p>
                         @enderror
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                             placeholder="Voordat ik op deze school kwam, werkte ik bij .........."
                         >{{ old('body') }}</textarea>
                         @error('body')
-                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De textvlak mag niet leeg zijn</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Voer text in. (Bijvoorbeeld: Voordat ik op deze school kwam had ik al ervaring met HTML ...)</p>
                         @enderror
                     </div>
                 </div>

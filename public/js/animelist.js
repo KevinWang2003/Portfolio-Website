@@ -99,7 +99,7 @@ async function getAnimeData(multiplier) {
 
         let animes = list.data;
 
-        let animeGrade = [];
+        let animeRating = [];
 
         for (const anime of animes) {
             let rating = anime.attributes;
@@ -110,11 +110,11 @@ async function getAnimeData(multiplier) {
                     rating,
                     relatedAnime
                 };
-                animeGrade.push(grade);
+                animeRating.push(grade);
             }
         }
 
-        return animeGrade;
+        return animeRating;
     } catch (err) {
         console.error("Error: ", err);
     }

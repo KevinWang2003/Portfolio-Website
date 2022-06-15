@@ -23,7 +23,7 @@
                             value="{{ old('question') }}"
                         >
                         @error('question')
-                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> De vraag mag niet leeg zijn.</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Voer een vraag in. (bijvoorbeeld: Hoe ga je naar de HZ in middelburg?)</p>
                         @enderror
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             id="answer"
                         >{{ old('answer') }}</textarea>
                         @error('answer')
-                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Het antwoord mag niet leeg zijn.</p>
+                        <p class="help is-danger"><i class="fas fa-exclamation-triangle"></i> Voer een antwoord in. (bijvoorbeeld: Steek de straat over ...)</p>
                         @enderror
                     </div>
                 </div>
