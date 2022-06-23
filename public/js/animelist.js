@@ -10,7 +10,7 @@ async function init() {
     // }
 
     const count = await getCount();
-    const amount = Math.ceil(count / 5);
+    const amount = Math.ceil(count / 10);
     console.log(amount);
 
 
@@ -19,7 +19,7 @@ async function init() {
 
     let indicator = 0;
 
-    let list = await getAnimeData(indicator.toString());
+    let list = await getAnimeData(`https://kitsu.io/api/edge/users/1288764/library-entries?page[limit]=10&page[offset]=0&sort=-rating`);
     console.log(list);
 
     await updatePage(list, indicator, amount);
@@ -44,9 +44,9 @@ async function init() {
 async function updatePage(list, indicator, amount) {
     const domElement = document.getElementById("anime");
     domElement.innerHTML = "";
+    const progress = document.getElementById('progress');
+    progress.innerHTML = `<p class="text-center" style="color: black">${indicator + 1} / ${amount}</p>`
     list.forEach(function(anime) {
-        const progress = document.getElementById('progress');
-        progress.innerHTML = `<p class="text-center" style="color: black">${indicator + 1} / ${amount}</p>`
         const ul = document.createElement("div");
         ul.innerHTML =
             `<div class="container">
@@ -74,15 +74,14 @@ async function updatePage(list, indicator, amount) {
 }
 
 async function refreshPage(indicator, amount) {
-    let multiplier = indicator * 5;
-    let list = await getAnimeData(multiplier.toString());
-    console.log(list)
+    let multiplier = indicator * 10;
+    let list = await getAnimeData(`https://kitsu.io/api/edge/users/1288764/library-entries?page[limit]=10&sort=-rating&page[offset]=${multiplier}`);
     await updatePage(list, indicator, amount);
 }
 
 async function getCount(){
     try {
-        let response = await fetch("https://kitsu.io/api/edge/users/1288764/library-entries?page&filter[status]=completed");
+        let response = await fetch("https://kitsu.io/api/edge/users/1288764/library-entries?page");
         let data = await response.json();
         let count = data.meta.count;
         return count;
@@ -92,14 +91,12 @@ async function getCount(){
 }
 
 
-async function getAnimeData(multiplier) {
+async function getAnimeData(page) {
     try {
-        let response = await fetch(`https://kitsu.io/api/edge/users/1288764/library-entries?page[limit]=5&page[offset]=${multiplier}&sort=-rating&filter[status]=completed`);
-        let list = await response.json();
-
-        let animes = list.data;
-
         let animeRating = [];
+        let response = await fetch(page);
+        let list = await response.json();
+        let animes = list.data;
 
         for (const anime of animes) {
             let rating = anime.attributes;
