@@ -11,7 +11,6 @@ async function init() {
 
     const count = await getCount();
     const amount = Math.ceil(count / 10);
-    console.log(amount);
 
 
     const previous = document.getElementById('prevPage');
@@ -20,7 +19,6 @@ async function init() {
     let indicator = 0;
 
     let list = await getAnimeData(`https://kitsu.io/api/edge/users/1288764/library-entries?page[limit]=10&page[offset]=0&sort=-rating`);
-    console.log(list);
 
     await updatePage(list, indicator, amount);
 
