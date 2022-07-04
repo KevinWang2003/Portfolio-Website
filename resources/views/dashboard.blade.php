@@ -97,15 +97,15 @@
                         <td rowspan="3">Framework Project 2</td>
                         <td rowspan="3">10</td>
                         <td>Portfolio</td>
-                        <td>-</td>
+                        <td>7,0</td>
                     </tr>
                     <tr>
                         <td>Project</td>
-                        <td>-</td>
+                        <td>8,5</td>
                     </tr>
                     <tr>
                         <td>Assessment</td>
-                        <td>-</td>
+                        <td>8,2</td>
                     </tr>
                     <tr>
                         <td rowspan="3">The Entire Year</td>
@@ -141,7 +141,8 @@
                 <p>Hieronder onder kan je zien hoe ver ik moet zijn om het jaar te halen:</p>
                 <progress class="nodig" max="60" value="45">45 EC</progress>
                 <p>En dit is waar ik nu ben:</p>
-                <progress class="nodig" max="60" value="50">50 EC</progress>
+                <progress class="nodig" max="60" value="60">60 EC</progress>
+                <p>Klaar met jaar 1</p>
             </div>
         </article>
     </div>
